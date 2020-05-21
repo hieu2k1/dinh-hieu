@@ -1,25 +1,20 @@
 ﻿using System;
 
-namespace Lad3
+class Car
 {
-    class Car
-    {
-     
-        public string make;
-        public string model;
-        public string color;
-        public int yearBuilt;
-        
-        public void Start()
-        {
-            System.Console.WriteLine(model + " started");
-        }
-        public void Stop()
-        {
-            System.Console.WriteLine(model + " stopped");
-        }
-    }
-         
-}
-    
+    public string make;
+    public string model;
+    public string color;
+    public int yearBuilt;
 
+    public void Start()
+    {
+        System.Console.WriteLine(model + "started");
+
+    }
+    public void Stop ()
+    {
+        System.Console.WriteLine(model + " stopped");
+    }
+
+}

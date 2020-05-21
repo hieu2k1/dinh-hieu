@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lad3
+namespace LAB03
 {
-    class Polymorphism
+    class Polymorphis
     {
         public static void Main(string[] args)
         {
