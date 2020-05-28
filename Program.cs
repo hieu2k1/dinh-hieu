@@ -1,12 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace LAB06
+namespace Lab05
 {
-    class Program
-    {
-        static void Main(string[] args)
+  
+        class Program
         {
-            Console.WriteLine("Hello World!");
+            static void Main(string[] args)
+            {
+                var employee1 = new Employee("Libby", 2000);
+                var employee2 = new TechnicalEmployee("Zaynah");
+                var employee3 = new BusinessEmployee("Winter");
+
+                Console.WriteLine(employee1.employeeStatus() + "..." + employee2.employeeStatus() + "..." + employee3.employeeStatus());
+            }
         }
-    }
+    
 }
