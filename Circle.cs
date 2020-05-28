@@ -1,26 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Lab04
+namespace CodeSnippet13
 {
-    //Circle class extends GeometricObject class
-    public class Circle : GeometricObject
+    class Circle
     {
-        private double radius;
-        public Circle(double x)
+        protected const double PI = 3.14;
+        protected double Radius = 14.9;
+        public virtual double Area()
         {
-            this.radius = x;
+            return PI * Radius * Radius;
         }
-        public Circle(double x, string c, double w) : base(c, w)
+    }
+    class Cone : Circle
+    {
+        protected double Side = 10.2;
+        public override double Area()
         {
-            this.radius = x;
+            return PI * Radius * Side;
         }
-        public override String ToString()
+        static void Main(string[] args)
         {
-            return "Circle has: radius is " + radius + ", color is " + PColor + ", weight is " + PWeight+" ";
+            Circle objRunOne = new Circle();
+            Console.WriteLine("Area is: " +objRunOne.Area());
+            Circle objRunTwo = new Cone();
+            Console.WriteLine("Area is: " +objRunTwo.Area());
         }
-        public override double findArea() { return Math.PI * radius * radius; }
-        public override double findPerimeter() { return 2 * Math.PI * radius; }
     }
 }
