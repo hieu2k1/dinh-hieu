@@ -1,29 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Security.Cryptography.X509Certificates;
 
-namespace Code_Snippet_6
+namespace Product
 {
-    static class Product
-    {
-        static int productId;
-        static double price;
-        static Product()
+    public abstract class Product
+    { 
+            protected int id;
+            protected string name;
+            protected double price;
+            protected string producer;
+        public Product(int id,string name,double price,string producer)
         {
-            productId = 10;
-            price = 156.32;
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.producer = producer;
         }
-        public static void Display()
-        {
-            Console.WriteLine("Product ID: " + productId);
-            Console.WriteLine("Product price: " + price);
-        }
-    }
-
-    class Medicine
-    {
-        static void Main(string[] args)
-        {
-            Product.Display();
-        }
+        public abstract double ComputeTax();
+        
     }
 }
-
