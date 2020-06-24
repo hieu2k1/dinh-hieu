@@ -1,0 +1,5 @@
+GET /usa/s19.2.php HTTP/2.0
+Connection: Keep-Alive
+Cookie: city=east-coast-usa
+Host: www.Webworldamaps.com
+Referer: http://www.Webworldamaps.com/
